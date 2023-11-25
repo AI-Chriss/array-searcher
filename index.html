@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./assets/green-logo.svg">
+    <link rel="mask-cion" type="x-icon" href="./assets/green-logo.svg" color="#000000">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>array-searcher</title>
+    <title>Usługi MP - Świat Zdrowia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <img src="./assets/green-logo.svg" alt="logo: świat zdrowia" class="green-logo">
     <div class="input-container">
-        <label for="input">Czynnik:</label>
-        <input type="text" placeholder="np. obsługa monitora..." id="input"/>
-    </div>
+        <label for="input">Czynnik szkodliwy</label>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-notes-medical"></i>
+          <input type="text" placeholder="monitor..." id="input"/>
+        </div>
+      </div>
       
-    <div class="output-container">
-        <p id="output"></p>
-    </div>
+      <div class="output-container">
+        <div class="output-container-wrapper">
+            <p id="output"></p>
+        </div>
+      </div>
       
-    <script src="script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+      <div class="fixed-footer">
+        <img src="./assets/white-logo.svg" alt="logo: świat zdrowia">
+      </div>
+      
+      <script src="https://kit.fontawesome.com/6986b075c3.js" crossorigin="anonymous"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+      <script src="script.js" type="module"></script>
 </body>
 </html>
 

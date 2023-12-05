@@ -11,7 +11,7 @@ function searchTests() {
   const searchIndex = testList.filter(test => {
     const isMatch = test.czynnik.toLowerCase().includes(searchString);
     if (isMatch) {
-      uniqueTests.add(`${test.badanie} - ${test.kod}`);
+        uniqueTests.add(`${test.czynnik}: ${test.badanie} - ${test.kod}`);
     }
     return isMatch;
   });

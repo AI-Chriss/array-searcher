@@ -4,14 +4,18 @@ const input = document.querySelector('#input');
 const output = document.querySelector('#output');
 const outputContainer = document.querySelector('.output-container');
 
+function removeSpecialChars(str) {
+  return str.replace(/[^a-zA-ZęóąśłżźćńĘÓĄŚŁŻŹĆŃ\s]/gi, '')
+}
+
 function searchTests() {
-  const searchString = input.value.toLowerCase();
+  const searchString = removeSpecialChars(input.value.toLowerCase());
   const uniqueTests = new Set();
 
   const searchIndex = testList.filter(test => {
     const isMatch = test.czynnik.toLowerCase().includes(searchString);
     if (isMatch) {
-        uniqueTests.add(`${test.czynnik}: ${test.badanie} - ${test.kod}`);
+      uniqueTests.add(`${test.czynnik}: ${test.badanie} - ${test.kod}`);
     }
     return isMatch;
   });

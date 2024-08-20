@@ -20,10 +20,6 @@ const testList = [
       "badania": "MP - próba oziębieniowa (OHDP006), MP - próba uciskowa (OHDP007), MP - palestezjometria - badanie progów czucia wibracji (OHDP005), MP - Neurolog konsultacja lekarska (OHCC012)"
   },
   {
-      "czynnik": "Drgania o ogólnymdziałaniu na organizmczłowieka (drgania ogólne)",
-      "badania": " ()"
-  },
-  {
       "czynnik": "Promieniowanie jonizujące",
       "badania": "MP - badanie ostrości widzenia (OHDP019), MP - konsultacja lekarza orzecznika - badanie okresowe (OHCC003), MP - morfologia krwi obwodowej z rozmazem (pełnym różnicowaniem granulocytów) (OHLT021), MP - retikulocyty (OHLT072), MP - Okulista konsultacja lekarska (OHCC013)"
   },
@@ -56,19 +52,19 @@ const testList = [
       "badania": "MP - EKG  z opisem (OHDP008), MP - EKG bez opisu (OHDP009), MP - spirometria (OHDP012), MP - glukoza (OHLT014), MP - kreatynina (OHLT052), MP - badanie ogólne moczu (OHLT007)"
   },
   {
-      "czynnik": "Pyły nieorganiczne zawierające krzemionkękrystaliczną",
+      "czynnik": "Pyły nieorganiczne zawierające krzemionkę krystaliczną",
       "badania": "MP - spirometria (OHDP012), MP - RTG klatki piersiowej (OHXR004)"
   },
   {
-      "czynnik": "Pyły węgla (kamiennego, brunatnego)",
+      "czynnik": "Pyły węgla (kamiennego brunatnego)",
       "badania": "MP - spirometria (OHDP012), MP - RTG klatki piersiowej (OHXR004)"
   },
   {
-      "czynnik": "Pyły grafitu (naturalnego, syntetycznego)",
+      "czynnik": "Pyły grafitu (naturalnego syntetycznego)",
       "badania": "MP - spirometria (OHDP012), MP - RTG klatki piersiowej (OHXR004)"
   },
   {
-      "czynnik": "Pyły nieorganicznezawierające włókna azbestu",
+      "czynnik": "Pyły nieorganiczne zawierające włókna azbestu",
       "badania": "MP - spirometria (OHDP012), MP - RTG klatki piersiowej (OHXR004)"
   },
   {
@@ -76,11 +72,11 @@ const testList = [
       "badania": "MP - spirometria (OHDP012), MP - RTG klatki piersiowej (OHXR004)"
   },
   {
-      "czynnik": "Pył zawierający metale twarde (np. wolfram, kobalt)",
+      "czynnik": "Pył zawierający metale twarde (np. wolfram kobalt)",
       "badania": "MP - spirometria (OHDP012), MP - RTG klatki piersiowej (OHXR004)"
   },
   {
-      "czynnik": "Pył zawierający tworzywa sztuczne, w tym sztuczne włókna mineralne",
+      "czynnik": "Pył zawierający tworzywa sztuczne w tym sztuczne włókna mineralne",
       "badania": "MP - spirometria (OHDP012), MP - RTG klatki piersiowej (OHXR004)"
   },
   {
@@ -236,14 +232,6 @@ const testList = [
       "badania": "MP - aminotransferaza asparaginianowa (AspAT,AST,GOT) (OHLT002), MP - aminotransferaza alaninowa (ALT,ALAT,GPT) (OHLT001), MP - próby wątrobowe (ALT, AST, ALP, BIL, GGTP) (OHLT026), MP - GGTP- gamma glutamylotransferaza (OHLT050), MP - kreatynina (OHLT052), MP - badanie ogólne moczu (OHLT007)"
   },
   {
-      "czynnik": "Ketony: keton butylowo-etylowy (heptan-3-on, EBK)",
-      "badania": " ()"
-  },
-  {
-      "czynnik": "Ketony: keton dipropylowy(heptan-4-on, DPK)",
-      "badania": " ()"
-  },
-  {
       "czynnik": "Kobalt",
       "badania": "MP - EKG  z opisem (OHDP008), MP - EKG bez opisu (OHDP009), MP - spirometria (OHDP012), MP - RTG klatki piersiowej (OHXR004)"
   },
@@ -280,11 +268,11 @@ const testList = [
       "badania": "mp -cholinesteraza (OHLT059)"
   },
   {
-      "czynnik": "Węglowodory chlorowane:związki dichlorodifenyloetanu, np. metoksychlor, metiochlor, związki chlorowanebenzenu, np. lindan, cykloheksanon",
+      "czynnik": "Węglowodory chlorowane - związki dichlorodifenyloetanu, np. metoksychlor, metiochlor, związki chlorowanebenzenu, np. lindan, cykloheksanon",
       "badania": "MP - aminotransferaza asparaginianowa (AspAT,AST,GOT) (OHLT002), MP - aminotransferaza alaninowa (ALT,ALAT,GPT) (OHLT001), MP - próby wątrobowe (ALT, AST, ALP, BIL, GGTP) (OHLT026), MP - GGTP- gamma glutamylotransferaza (OHLT050)"
   },
   {
-      "czynnik": "Węglowodory chlorowane:chlorowane cyklodieny np. aldrin, dieldrin",
+      "czynnik": "Węglowodory chlorowane - chlorowane cyklodieny np. aldrin, dieldrin",
       "badania": "MP - aminotransferaza asparaginianowa (AspAT,AST,GOT) (OHLT002), MP - aminotransferaza alaninowa (ALT,ALAT,GPT) (OHLT001), MP - próby wątrobowe (ALT, AST, ALP, BIL, GGTP) (OHLT026), MP - GGTP- gamma glutamylotransferaza (OHLT050), MP - morfologia krwi obwodowej bez rozmazu (OHLT020)"
   },
   {

@@ -4,41 +4,49 @@ const input = document.querySelector('#input');
 const output = document.querySelector('#output');
 const outputContainer = document.querySelector('.output-container');
 
+// Funkcja usuwająca znaki specjalne
 function removeSpecialChars(str) {
-return str.replace(/[^a-zA-ZęóąśłżźćńĘÓĄŚŁŻŹĆŃ\s]/gi, '')
+  return str.replace(/[^a-zA-ZęóąśłżźćńĘÓĄŚŁŻŹĆŃ\s]/gi, '');
 }
 
 function searchTests() {
-const searchString = removeSpecialChars(input.value.toLowerCase());
-const uniqueTests = new Set();
+  const searchString = removeSpecialChars(input.value.toLowerCase());
+  const uniqueTests = new Set();
 
-const searchIndex = testList.filter(test => {
-  const isMatch = test.czynnik.toLowerCase().includes(searchString);
-  if (isMatch) {
-    uniqueTests.add(`<strong>${test.czynnik}:</strong> ${test.badania}`);
+  // Filtruj testy na podstawie wyszukiwanego ciągu znaków
+  const searchIndex = testList.filter(test => {
+    const isMatch = test.czynnik.toLowerCase().includes(searchString);
+    if (isMatch) {
+      uniqueTests.add({
+        czynnik: test.czynnik,
+        badania: test.badania.split(', ') // podział badań na podstawie przecinka
+      });
+    }
+    return isMatch;
+  });
+
+  // Wyświetlanie wyników
+  if (searchIndex.length > 0) {
+    const resultsHTML = Array.from(uniqueTests).map(testObj => {
+      const czynnik = testObj.czynnik;
+      // Stwórz HTML dla każdego badania w osobnym wierszu
+      const badania = testObj.badania.map(badanie => `<div>${badanie}</div>`).join('');
+      // Składanie HTML
+      return `<div><strong>${czynnik}:</strong><br>${badania}</div>`;
+    }).join('');
+
+    output.innerHTML = resultsHTML;
+    outputContainer.style.display = "flex";
+  } else {
+    output.innerHTML = "Nie znaleziono wyników.";
+    outputContainer.style.display = "flex";
   }
-  return isMatch;
-});
 
-// Display the results
-if (searchIndex.length > 0) {
-const formattedTests = Array.from(uniqueTests).map(test => test.replace(/, /g, ', <br>'));
-const resultsHTML = formattedTests.map(test => {
-  const parts = test.split(':');
-  const czynnik = parts[0];
-  const badania = parts[1].split(',').join(',');
-  return `<div>${czynnik}:<br>${badania}</div>`;
-}).join('');
-output.innerHTML = resultsHTML;
-outputContainer.style.display = "flex";
-} else {
-output.innerHTML = "Nie znaleziono wyników.";
-}
-
-if (searchString === '') {
-  output.innerHTML = "";
-  outputContainer.style.display = "none";
-}
+  // Ukryj wyniki, gdy pole wyszukiwania jest puste
+  if (searchString === '') {
+    output.innerHTML = "";
+    outputContainer.style.display = "none";
+  }
 }
 
 input.addEventListener('input', searchTests);
